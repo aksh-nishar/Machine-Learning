@@ -1,0 +1,44 @@
+5 methods of building models:
+    1: All in 
+        (When to use it)
+        * Prior Knowledge 
+        * You have to 
+        * Preparing for Backward Elimination
+
+    2: Backward Elimination 
+        (Steps) 
+        Step 1: Select a significance level to stay in the model (eg. SL = 0.05)
+        Step 2: Fit the full model with all possible predictors
+        Step 3: Consider the predictor with the highest P-value. If P > SL, go to the STEP 4, otherwise go to FIN
+        Step 4: Remove the predictor
+        Step 5: Fit the model without this variable* (Rebuild the model)
+            From step 5 go the step 3
+        FIN: Your model is ready 
+
+    3: Forward Selection
+        (Steps)
+        Step 1: Select a significance level to enter the model (eg. SL = 0.05)
+        Step 2: Fit all simple regression models y ~ xₙ. Select the one with the lowest value.
+        Step 3: Keep this variable and fit all possible models with one extra predictor added to the one(s) you already have
+        Step 4: Consider the predictor with the lowest P-value. If P < SL, go to STEP 3, otherwise go to FIN
+        FIN: Keep the previous model.
+
+    4: Bidirectional Elimination
+        (Steps)
+        Step 1: Select a significance level to enter and to stay in the model. (eg. SLENTER = 0.05, SLSTAY = 0.05)
+        Step 2: Perform the next step of Forward Selection (new variables must have: P < SLENTER to enter)
+        Step 3: Perform ALL the steps of Backward Elimination (old variables must have: P < SLSTAY to stay)
+            Go to Step 2 iteratively
+        Step 4: No new variables can enter and no new variables can exit then FIN
+        FIN: Your model is ready.
+    5: Score Comparison
+
+    All Possible Models:
+        (steps)
+        Step 1: Select a criterion of goodness of fit(eg. Akaike criterion)
+        Step 2: Construct all possible regression models: 2ᴺ-1 total combinations.
+        Step 3: Select the one with the best criterion
+        FIN: Your model is ready
+
+2, 3, 4, are together also known as Stepwise Regression.
+
